@@ -9,6 +9,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import model.bean.NhanVien;
@@ -40,6 +41,36 @@ public class NhanVienDAO {
                 nv.setEmail(rs.getString("Email"));
             }
             return nv;
+        } catch (SQLException ex) {
+            Logger.getLogger(NhanVienDAO.class.getName()).log(Level.SEVERE, null, ex);
+        } finally{
+            db.closeConnection();
+        }
+        return null;
+    }
+
+    public ArrayList<NhanVien> getListNhanVien() {
+        String query = "select * from nhanvien";
+        ArrayList<NhanVien> nvList = new ArrayList<>();
+        NhanVien nv = null;
+        try {
+            Statement st = db.getConnection().createStatement();
+            ResultSet rs = st.executeQuery(query);
+            System.out.println(query);
+            while(rs.next()){
+                nv = new NhanVien();
+                nv.setMaNV(rs.getString("MaNV"));
+                nv.setTenNV(rs.getString("TenNV"));
+                nv.setMatKhau(rs.getString("MatKhau"));
+                nv.setNgaySinh(rs.getString("NgaySinh"));
+                nv.setGioiTinh(rs.getString("GioiTinh"));
+                nv.setChucVu(rs.getString("ChucVu"));
+                nv.setDiaChi(rs.getString("DiaChi"));
+                nv.setSoDienThoai(rs.getString("SoDienThoai"));
+                nv.setEmail(rs.getString("Email"));
+                nvList.add(nv);
+            }
+            return nvList;
         } catch (SQLException ex) {
             Logger.getLogger(NhanVienDAO.class.getName()).log(Level.SEVERE, null, ex);
         } finally{

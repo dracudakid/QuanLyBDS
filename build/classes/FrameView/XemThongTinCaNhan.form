@@ -43,15 +43,15 @@
                       </Group>
                       <EmptySpace min="-2" pref="96" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel18" linkSize="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel17" linkSize="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel16" linkSize="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel15" linkSize="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel14" linkSize="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel13" linkSize="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel12" linkSize="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel11" linkSize="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel10" linkSize="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbAdmin" linkSize="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbEmail" linkSize="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbSoDienThoai" linkSize="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbDiaChi" linkSize="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbChucVu" linkSize="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbGioiTinh" linkSize="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbNgaySinh" linkSize="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbTenNV" linkSize="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbMaNV" linkSize="1" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -65,47 +65,47 @@
               <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel1" alignment="3" max="32767" attributes="0"/>
-                  <Component id="jLabel10" alignment="3" max="32767" attributes="0"/>
+                  <Component id="lbMaNV" alignment="3" max="32767" attributes="0"/>
               </Group>
               <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel2" alignment="3" max="32767" attributes="0"/>
-                  <Component id="jLabel11" alignment="3" max="32767" attributes="0"/>
+                  <Component id="lbTenNV" alignment="3" max="32767" attributes="0"/>
               </Group>
               <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel3" alignment="3" max="32767" attributes="0"/>
-                  <Component id="jLabel12" alignment="3" max="32767" attributes="0"/>
+                  <Component id="lbNgaySinh" alignment="3" max="32767" attributes="0"/>
               </Group>
               <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel4" alignment="3" max="32767" attributes="0"/>
-                  <Component id="jLabel13" alignment="3" max="32767" attributes="0"/>
+                  <Component id="lbGioiTinh" alignment="3" max="32767" attributes="0"/>
               </Group>
               <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel5" alignment="3" max="32767" attributes="0"/>
-                  <Component id="jLabel14" alignment="3" max="32767" attributes="0"/>
+                  <Component id="lbChucVu" alignment="3" max="32767" attributes="0"/>
               </Group>
               <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel6" alignment="3" max="32767" attributes="0"/>
-                  <Component id="jLabel15" alignment="3" max="32767" attributes="0"/>
+                  <Component id="lbDiaChi" alignment="3" max="32767" attributes="0"/>
               </Group>
               <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel7" alignment="3" max="32767" attributes="0"/>
-                  <Component id="jLabel16" alignment="3" max="32767" attributes="0"/>
+                  <Component id="lbSoDienThoai" alignment="3" max="32767" attributes="0"/>
               </Group>
               <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel8" alignment="3" max="32767" attributes="0"/>
-                  <Component id="jLabel17" alignment="3" max="32767" attributes="0"/>
+                  <Component id="lbEmail" alignment="3" max="32767" attributes="0"/>
               </Group>
               <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel9" alignment="3" max="32767" attributes="0"/>
-                  <Component id="jLabel18" alignment="3" max="32767" attributes="0"/>
+                  <Component id="lbAdmin" alignment="3" max="32767" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -190,7 +190,7 @@
         <Property name="text" type="java.lang.String" value="Admin"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel10">
+    <Component class="javax.swing.JLabel" name="lbMaNV">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="14" style="0"/>
@@ -198,7 +198,7 @@
         <Property name="text" type="java.lang.String" value="NV001"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel11">
+    <Component class="javax.swing.JLabel" name="lbTenNV">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="14" style="0"/>
@@ -206,7 +206,7 @@
         <Property name="text" type="java.lang.String" value="Nguy&#x1ec5;n V&#x103;n A"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel12">
+    <Component class="javax.swing.JLabel" name="lbNgaySinh">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="14" style="0"/>
@@ -214,7 +214,7 @@
         <Property name="text" type="java.lang.String" value="22/09/1994"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel13">
+    <Component class="javax.swing.JLabel" name="lbGioiTinh">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="14" style="0"/>
@@ -222,7 +222,7 @@
         <Property name="text" type="java.lang.String" value="jLabel13"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel14">
+    <Component class="javax.swing.JLabel" name="lbChucVu">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="14" style="0"/>
@@ -230,7 +230,7 @@
         <Property name="text" type="java.lang.String" value="jLabel14"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel15">
+    <Component class="javax.swing.JLabel" name="lbDiaChi">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="14" style="0"/>
@@ -238,7 +238,7 @@
         <Property name="text" type="java.lang.String" value="59 Nguy&#x1ec5;n lUonwg b&#x1eb1;ng"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel16">
+    <Component class="javax.swing.JLabel" name="lbSoDienThoai">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="14" style="0"/>
@@ -246,7 +246,7 @@
         <Property name="text" type="java.lang.String" value="0993219314"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel17">
+    <Component class="javax.swing.JLabel" name="lbEmail">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="14" style="0"/>
@@ -254,7 +254,7 @@
         <Property name="text" type="java.lang.String" value="jLabel17"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel18">
+    <Component class="javax.swing.JLabel" name="lbAdmin">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="14" style="0"/>

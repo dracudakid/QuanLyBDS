@@ -5,6 +5,11 @@
  */
 package FrameView;
 
+import java.util.ArrayList;
+import javax.swing.table.DefaultTableModel;
+import model.bean.NhanVien;
+import model.dao.NhanVienDAO;
+
 /**
  *
  * @author dracu
@@ -16,8 +21,17 @@ public class XemDanhSachNV extends javax.swing.JPanel {
      */
     public XemDanhSachNV() {
         initComponents();
+        loadTableNhanVien();
     }
-
+    private void loadTableNhanVien(){
+        NhanVienDAO nvDAO = new NhanVienDAO();
+        ArrayList<NhanVien> nvList = nvDAO.getListNhanVien();
+        DefaultTableModel modelTC = (DefaultTableModel) jtTatCa.getModel();
+        for (NhanVien nv : nvList) {
+            Object[] row = {nv.getMaNV(), nv.getTenNV(), nv.getMatKhau(),  nv.getNgaySinh(),nv.getGioiTinh(), nv.getChucVu(), nv.getDiaChi(), nv.getSoDienThoai(), nv.getEmail(),nv.isAdmin(), "Xem thêm"};
+            modelTC.addRow(row);
+        }
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -27,19 +41,109 @@ public class XemDanhSachNV extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        lbTimKiem = new javax.swing.JLabel();
+        tfTimKiem = new javax.swing.JTextField();
+        jpTatca = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jtTatCa = new javax.swing.JTable();
+        btThemKhachHang = new javax.swing.JButton();
+
+        lbTimKiem.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        lbTimKiem.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbTimKiem.setText("Tìm kiếm");
+
+        jtTatCa.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jtTatCa.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Mã KH", "Tên NV", "Mật khẩu", "Ngày sinh", "Giới tính", "Chức vụ", "Địa chỉ", "Số điện thoại", "Email", "Admin", ""
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, true, false, true, true, true, true, true, true
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jtTatCa.setRowHeight(25);
+        jtTatCa.getTableHeader().setReorderingAllowed(false);
+        jScrollPane2.setViewportView(jtTatCa);
+
+        javax.swing.GroupLayout jpTatcaLayout = new javax.swing.GroupLayout(jpTatca);
+        jpTatca.setLayout(jpTatcaLayout);
+        jpTatcaLayout.setHorizontalGroup(
+            jpTatcaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpTatcaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 488, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jpTatcaLayout.setVerticalGroup(
+            jpTatcaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpTatcaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 254, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        btThemKhachHang.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        btThemKhachHang.setText("Thêm khách hàng");
+        btThemKhachHang.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btThemKhachHangActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(254, Short.MAX_VALUE)
+                .addComponent(lbTimKiem, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(tfTimKiem, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btThemKhachHang)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jpTatca, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tfTimKiem, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbTimKiem, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 302, Short.MAX_VALUE)
+                .addComponent(btThemKhachHang, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(52, 52, 52)
+                    .addComponent(jpTatca, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(61, 61, 61)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btThemKhachHangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btThemKhachHangActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btThemKhachHangActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btThemKhachHang;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JPanel jpTatca;
+    private javax.swing.JTable jtTatCa;
+    private javax.swing.JLabel lbTimKiem;
+    private javax.swing.JTextField tfTimKiem;
     // End of variables declaration//GEN-END:variables
 }

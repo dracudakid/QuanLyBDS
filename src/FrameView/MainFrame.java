@@ -14,11 +14,13 @@ public class MainFrame extends javax.swing.JFrame {
     /**
      * Creates new form MainFrame
      */
+    private String maNV;
     public MainFrame() {
         initComponents();
     }
 
     MainFrame(String tentaikhoan) {
+        maNV = tentaikhoan;
         initComponents();
     }
 
@@ -32,7 +34,7 @@ public class MainFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
-        xemThongTinCaNhan2 = new FrameView.XemThongTinCaNhan();
+        xemThongTinCaNhan2 = new FrameView.XemThongTinCaNhan(maNV);
         xemDanhSachNV1 = new FrameView.XemDanhSachNV();
         xemDanhSachKH2 = new FrameView.XemDanhSachKH();
         xemDanhSachBDS1 = new FrameView.XemDanhSachBDS();
