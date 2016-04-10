@@ -35,7 +35,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
         xemThongTinCaNhan2 = new FrameView.XemThongTinCaNhan(maNV);
-        xemDanhSachNV1 = new FrameView.XemDanhSachNV();
+        xemDanhSachNV2 = new FrameView.XemDanhSachNV();
         xemDanhSachKH2 = new FrameView.XemDanhSachKH();
         xemDanhSachBDS1 = new FrameView.XemDanhSachBDS();
         xemDanhSachGiaoDich1 = new FrameView.XemDanhSachGiaoDich();
@@ -47,19 +47,7 @@ public class MainFrame extends javax.swing.JFrame {
         setTitle("Quản Lý");
 
         jTabbedPane1.addTab("Cá nhân", xemThongTinCaNhan2);
-
-        javax.swing.GroupLayout xemDanhSachNV1Layout = new javax.swing.GroupLayout(xemDanhSachNV1);
-        xemDanhSachNV1.setLayout(xemDanhSachNV1Layout);
-        xemDanhSachNV1Layout.setHorizontalGroup(
-            xemDanhSachNV1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 795, Short.MAX_VALUE)
-        );
-        xemDanhSachNV1Layout.setVerticalGroup(
-            xemDanhSachNV1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 601, Short.MAX_VALUE)
-        );
-
-        jTabbedPane1.addTab("Nhân viên", xemDanhSachNV1);
+        jTabbedPane1.addTab("Nhân viên", xemDanhSachNV2);
         jTabbedPane1.addTab("Khách hàng", xemDanhSachKH2);
         jTabbedPane1.addTab("Bất động sản", xemDanhSachBDS1);
 
@@ -143,7 +131,7 @@ public class MainFrame extends javax.swing.JFrame {
     private FrameView.XemDanhSachBDS xemDanhSachBDS1;
     private FrameView.XemDanhSachGiaoDich xemDanhSachGiaoDich1;
     private FrameView.XemDanhSachKH xemDanhSachKH2;
-    private FrameView.XemDanhSachNV xemDanhSachNV1;
+    private FrameView.XemDanhSachNV xemDanhSachNV2;
     private FrameView.XemThongTinCaNhan xemThongTinCaNhan2;
     // End of variables declaration//GEN-END:variables
 }
