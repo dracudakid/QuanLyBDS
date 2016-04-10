@@ -17,13 +17,27 @@ public class BatDongSan {
     private String diaChi;
     private String viTri;
     private String huong;
-    private String dienTich;
-    private String giaTien;
+    private int dienTich;
+    private int giaTien;
     private String ghiChu;
     private String tinhTrang;
 
     public String getMaBDS() {
         return maBDS;
+    }
+
+    public BatDongSan(String maBDS, String maKH, String loaiNC, String loaiBDS, String diaChi, String viTri, String huong, int dienTich, int giaTien, String ghiChu, String tinhTrang) {
+        this.maBDS = maBDS;
+        this.maKH = maKH;
+        this.loaiNC = loaiNC;
+        this.loaiBDS = loaiBDS;
+        this.diaChi = diaChi;
+        this.viTri = viTri;
+        this.huong = huong;
+        this.dienTich = dienTich;
+        this.giaTien = giaTien;
+        this.ghiChu = ghiChu;
+        this.tinhTrang = tinhTrang;
     }
 
     public void setMaBDS(String maBDS) {
@@ -78,19 +92,19 @@ public class BatDongSan {
         this.huong = huong;
     }
 
-    public String getDienTich() {
+    public int getDienTich() {
         return dienTich;
     }
 
-    public void setDienTich(String dienTich) {
+    public void setDienTich(int dienTich) {
         this.dienTich = dienTich;
     }
 
-    public String getGiaTien() {
+    public int getGiaTien() {
         return giaTien;
     }
 
-    public void setGiaTien(String giaTien) {
+    public void setGiaTien(int giaTien) {
         this.giaTien = giaTien;
     }
 

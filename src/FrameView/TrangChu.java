@@ -217,7 +217,12 @@ public class TrangChu extends javax.swing.JFrame {
             NhanVienDAO nvDAO = new NhanVienDAO();
             NhanVien nhanvien = nvDAO.getNhanVienByMaNV(tentaikhoan);
             if(nhanvien != null && tentaikhoan.equals(nhanvien.getMaNV()) && matkhau.equals(nhanvien.getMatKhau())){
-                System.out.println("Dang nhap thanh cong");
+                MainFrame mf = new MainFrame(tentaikhoan);
+                mf.setSize(this.getSize());
+                mf.setLocation(this.getLocation());
+                mf.setVisible(true);
+                this.setVisible(false);
+                
             } else{
                 lbError.setText("Sai Tài khoản hoặc Mật khẩu. Vui lòng nhập lại.");
             } 
