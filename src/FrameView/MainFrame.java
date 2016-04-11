@@ -59,7 +59,7 @@ public class MainFrame extends javax.swing.JFrame {
         );
         xemDanhSachGiaoDich1Layout.setVerticalGroup(
             xemDanhSachGiaoDich1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 601, Short.MAX_VALUE)
+            .addGap(0, 617, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Giao dịch", xemDanhSachGiaoDich1);

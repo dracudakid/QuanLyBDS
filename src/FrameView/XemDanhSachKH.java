@@ -47,7 +47,7 @@ public class XemDanhSachKH extends javax.swing.JPanel {
                 JTable table = (JTable) e.getSource();
                 int modelRow = Integer.valueOf(e.getActionCommand());
                 String maKH = (String) table.getModel().getValueAt(modelRow, 0);
-                System.out.println(maKH);
+                new XemThongTinKHMua(maKH).setVisible(true);
             }
         };
         ButtonColumn buttonColumn = new ButtonColumn(jtTatCa, xemThem, 5);
@@ -85,18 +85,14 @@ public class XemDanhSachKH extends javax.swing.JPanel {
         jpTatca = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jtTatCa = new javax.swing.JTable();
-        btThemKhachHang = new javax.swing.JButton();
         jpKHMua = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         jtKhachHangMua = new javax.swing.JTable();
-        jButton2 = new javax.swing.JButton();
         jpKHBan = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jtKhachHangBan = new javax.swing.JTable();
-        btThem = new javax.swing.JButton();
         tfTimKiem = new javax.swing.JTextField();
-
-        setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btThemKhachHang = new javax.swing.JButton();
 
         lbLoaiKhachHang.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         lbLoaiKhachHang.setText("Loại khách hàng:");
@@ -137,30 +133,15 @@ public class XemDanhSachKH extends javax.swing.JPanel {
             jtTatCa.getColumnModel().getColumn(5).setResizable(false);
         }
 
-        btThemKhachHang.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        btThemKhachHang.setText("Thêm khách hàng");
-        btThemKhachHang.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btThemKhachHangActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jpTatcaLayout = new javax.swing.GroupLayout(jpTatca);
         jpTatca.setLayout(jpTatcaLayout);
         jpTatcaLayout.setHorizontalGroup(
             jpTatcaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 673, Short.MAX_VALUE)
-            .addGroup(jpTatcaLayout.createSequentialGroup()
-                .addComponent(btThemKhachHang)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 675, Short.MAX_VALUE)
         );
         jpTatcaLayout.setVerticalGroup(
             jpTatcaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpTatcaLayout.createSequentialGroup()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 347, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btThemKhachHang, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 329, Short.MAX_VALUE)
         );
 
         tpKhachHang.addTab("Tất cả", jpTatca);
@@ -199,25 +180,15 @@ public class XemDanhSachKH extends javax.swing.JPanel {
             jtKhachHangMua.getColumnModel().getColumn(5).setPreferredWidth(70);
         }
 
-        jButton2.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        jButton2.setText("Thêm khách hàng");
-
         javax.swing.GroupLayout jpKHMuaLayout = new javax.swing.GroupLayout(jpKHMua);
         jpKHMua.setLayout(jpKHMuaLayout);
         jpKHMuaLayout.setHorizontalGroup(
             jpKHMuaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 673, Short.MAX_VALUE)
-            .addGroup(jpKHMuaLayout.createSequentialGroup()
-                .addComponent(jButton2)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 675, Short.MAX_VALUE)
         );
         jpKHMuaLayout.setVerticalGroup(
             jpKHMuaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpKHMuaLayout.createSequentialGroup()
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 347, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 329, Short.MAX_VALUE)
         );
 
         tpKhachHang.addTab("Khách hàng mua", jpKHMua);
@@ -256,33 +227,26 @@ public class XemDanhSachKH extends javax.swing.JPanel {
             jtKhachHangBan.getColumnModel().getColumn(5).setPreferredWidth(70);
         }
 
-        btThem.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        btThem.setText("Thêm khách hàng");
-        btThem.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btThemActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jpKHBanLayout = new javax.swing.GroupLayout(jpKHBan);
         jpKHBan.setLayout(jpKHBanLayout);
         jpKHBanLayout.setHorizontalGroup(
             jpKHBanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 673, Short.MAX_VALUE)
-            .addGroup(jpKHBanLayout.createSequentialGroup()
-                .addComponent(btThem)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 675, Short.MAX_VALUE)
         );
         jpKHBanLayout.setVerticalGroup(
             jpKHBanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpKHBanLayout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 347, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btThem, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 329, Short.MAX_VALUE)
         );
 
         tpKhachHang.addTab("Khách hàng bán", jpKHBan);
+
+        btThemKhachHang.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        btThemKhachHang.setText("Thêm khách hàng");
+        btThemKhachHang.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btThemKhachHangActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -297,7 +261,10 @@ public class XemDanhSachKH extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(lbTimKiem, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tfTimKiem, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(tfTimKiem, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btThemKhachHang)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -309,19 +276,19 @@ public class XemDanhSachKH extends javax.swing.JPanel {
                     .addComponent(lbTimKiem, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbLoaiKhachHang))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tpKhachHang))
+                .addComponent(tpKhachHang, javax.swing.GroupLayout.PREFERRED_SIZE, 359, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btThemKhachHang, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         tpKhachHang.getAccessibleContext().setAccessibleName("jTabbedPaneKhachHang");
     }// </editor-fold>//GEN-END:initComponents
 
     private void btThemKhachHangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btThemKhachHangActionPerformed
-        // TODO add your handling code here:
+        ThemKhachHang tkh = new ThemKhachHang();
+        tkh.setVisible(true);
     }//GEN-LAST:event_btThemKhachHangActionPerformed
-
-    private void btThemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btThemActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btThemActionPerformed
 
     public static void main(String[] args) {
         JFrame frame = new JFrame();
@@ -331,9 +298,7 @@ public class XemDanhSachKH extends javax.swing.JPanel {
         frame.setVisible(true);
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btThem;
     private javax.swing.JButton btThemKhachHang;
-    private javax.swing.JButton jButton2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;

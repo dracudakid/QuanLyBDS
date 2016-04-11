@@ -75,4 +75,20 @@ public class KhachHangDAO {
         }
         return alKhachHang;
     }
+
+    public KhachHang getKhachHangByMaKH(String maKH) {
+        KhachHang kh = null;
+        String query = "Select * from khachhang where MaKH=?";
+        try {
+            pst = db.getConnection().prepareStatement(query);
+            pst.setString(1, maKH);
+            rs = pst.executeQuery();
+            if(rs.next()){
+                kh = new KhachHang(rs.getString("MaKH"), rs.getString("TenKH"), rs.getString("GioiTinh"), rs.getString("NgaySinh"), rs.getString("DiaChi"), rs.getString("Email"), rs.getString("SoDienThoai"), rs.getString("LoaiKH"));
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(KhachHangDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return kh;
+    }
 }
