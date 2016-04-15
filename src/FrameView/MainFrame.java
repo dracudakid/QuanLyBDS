@@ -38,7 +38,7 @@ public class MainFrame extends javax.swing.JFrame {
         xemDanhSachNV2 = new FrameView.XemDanhSachNV();
         xemDanhSachKH2 = new FrameView.XemDanhSachKH();
         xemDanhSachBDS1 = new FrameView.XemDanhSachBDS();
-        xemDanhSachGiaoDich1 = new FrameView.XemDanhSachGiaoDich();
+        xemDanhSachGiaoDich2 = new FrameView.XemDanhSachGiaoDich();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -50,19 +50,7 @@ public class MainFrame extends javax.swing.JFrame {
         jTabbedPane1.addTab("Nhân viên", xemDanhSachNV2);
         jTabbedPane1.addTab("Khách hàng", xemDanhSachKH2);
         jTabbedPane1.addTab("Bất động sản", xemDanhSachBDS1);
-
-        javax.swing.GroupLayout xemDanhSachGiaoDich1Layout = new javax.swing.GroupLayout(xemDanhSachGiaoDich1);
-        xemDanhSachGiaoDich1.setLayout(xemDanhSachGiaoDich1Layout);
-        xemDanhSachGiaoDich1Layout.setHorizontalGroup(
-            xemDanhSachGiaoDich1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 795, Short.MAX_VALUE)
-        );
-        xemDanhSachGiaoDich1Layout.setVerticalGroup(
-            xemDanhSachGiaoDich1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 617, Short.MAX_VALUE)
-        );
-
-        jTabbedPane1.addTab("Giao dịch", xemDanhSachGiaoDich1);
+        jTabbedPane1.addTab("Giao dịch", xemDanhSachGiaoDich2);
 
         jMenu1.setText("File");
         jMenuBar1.add(jMenu1);
@@ -129,7 +117,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private FrameView.XemDanhSachBDS xemDanhSachBDS1;
-    private FrameView.XemDanhSachGiaoDich xemDanhSachGiaoDich1;
+    private FrameView.XemDanhSachGiaoDich xemDanhSachGiaoDich2;
     private FrameView.XemDanhSachKH xemDanhSachKH2;
     private FrameView.XemDanhSachNV xemDanhSachNV2;
     private FrameView.XemThongTinCaNhan xemThongTinCaNhan2;

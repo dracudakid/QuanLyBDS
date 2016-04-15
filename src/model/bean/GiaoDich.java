@@ -16,9 +16,21 @@ public class GiaoDich {
     private String benMua;
     private String benBan;
     private String maBDS;
-    private String soTien;
+    private int soTien;
     private String ngayGD;
-    private String tiLeHoaHong;
+    private float tiLeHoaHong;
+
+    public GiaoDich(String maGD, String maNVGD, String moTaGD, String benMua, String benBan, String maBDS, int soTien, String ngayGD, float tiLeHoaHong) {
+        this.maGD = maGD;
+        this.maNVGD = maNVGD;
+        this.moTaGD = moTaGD;
+        this.benMua = benMua;
+        this.benBan = benBan;
+        this.maBDS = maBDS;
+        this.soTien = soTien;
+        this.ngayGD = ngayGD;
+        this.tiLeHoaHong = tiLeHoaHong;
+    }
 
     public String getMaGD() {
         return maGD;
@@ -68,11 +80,11 @@ public class GiaoDich {
         this.maBDS = maBDS;
     }
 
-    public String getSoTien() {
+    public int getSoTien() {
         return soTien;
     }
 
-    public void setSoTien(String soTien) {
+    public void setSoTien(int soTien) {
         this.soTien = soTien;
     }
 
@@ -84,11 +96,11 @@ public class GiaoDich {
         this.ngayGD = ngayGD;
     }
 
-    public String getTiLeHoaHong() {
+    public float getTiLeHoaHong() {
         return tiLeHoaHong;
     }
 
-    public void setTiLeHoaHong(String tiLeHoaHong) {
+    public void setTiLeHoaHong(float tiLeHoaHong) {
         this.tiLeHoaHong = tiLeHoaHong;
     }
     
